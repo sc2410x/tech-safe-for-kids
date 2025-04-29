@@ -9,6 +9,7 @@ interface CategoryCardProps {
   icon: React.ReactNode;
   to: string;
   color?: 'blue' | 'teal' | 'purple';
+  imageSrc?: string;
 }
 
 const CategoryCard = ({
@@ -17,6 +18,7 @@ const CategoryCard = ({
   icon,
   to,
   color = 'blue',
+  imageSrc,
 }: CategoryCardProps) => {
   const colorClasses = {
     blue: 'bg-kid-blue-light border-kid-blue hover:bg-kid-blue/10',
@@ -27,8 +29,17 @@ const CategoryCard = ({
   return (
     <Link 
       to={to} 
-      className={`block rounded-xl border-2 p-6 transition-all duration-200 ${colorClasses[color]}`}
+      className={`block rounded-xl border-2 p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden ${colorClasses[color]}`}
     >
+      {imageSrc && (
+        <div className="h-40 -mx-6 -mt-6 mb-6 overflow-hidden">
+          <img 
+            src={imageSrc} 
+            alt={title} 
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
       <div className="flex items-center justify-between mb-4">
         <div className="text-3xl">{icon}</div>
         <ArrowRight size={20} className="text-gray-500" />

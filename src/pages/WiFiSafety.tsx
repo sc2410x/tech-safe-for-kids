@@ -10,8 +10,9 @@ const WiFiSafety = () => {
     <Layout>
       <div className="section-container">
         {/* Hero Section */}
-        <div className="bg-kid-blue-light rounded-2xl p-8 mb-12">
-          <div className="flex flex-col md:flex-row items-center md:space-x-8">
+        <div className="bg-kid-blue-light rounded-2xl p-8 mb-12 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558346490-a72e53ae2d4f')] bg-cover bg-center opacity-10"></div>
+          <div className="flex flex-col md:flex-row items-center md:space-x-8 relative z-10">
             <div className="mb-8 md:mb-0 md:w-1/4 flex justify-center">
               <Wifi size={120} className="text-kid-blue" />
             </div>
@@ -37,6 +38,7 @@ const WiFiSafety = () => {
             description="Most routers come with default usernames and passwords that are easy to guess. Change both your router's admin password and your WiFi network password to strong, unique combinations."
             icon={<Lock />}
             level="beginner"
+            to="/instructions/change-router-password"
           />
           
           <SafetyTipCard
@@ -44,6 +46,7 @@ const WiFiSafety = () => {
             description="Router manufacturers regularly release firmware updates that fix security vulnerabilities. Check your router model's support page for how to update your specific device."
             icon={<Settings />}
             level="beginner"
+            to="/instructions/update-firmware"
           />
           
           <SafetyTipCard
@@ -51,6 +54,7 @@ const WiFiSafety = () => {
             description="Make sure your WiFi is using WPA3 encryption (or at least WPA2) to protect the data transmitted on your network. This setting can be found in your router's security settings."
             icon={<Shield />}
             level="beginner"
+            to="/instructions/wifi-encryption"
           />
           
           <SafetyTipCard
@@ -58,6 +62,7 @@ const WiFiSafety = () => {
             description="Set up a separate guest WiFi network for visitors and less secure devices. This keeps them separated from your main network where your children's devices connect."
             icon={<Wifi />}
             level="intermediate"
+            to="/instructions/guest-network"
           />
         </div>
         
@@ -74,6 +79,7 @@ const WiFiSafety = () => {
             description="Enable content filtering through your router to block inappropriate websites across all devices on your network. Most routers allow you to select categories of content to block."
             icon={<Shield />}
             level="intermediate"
+            to="/instructions/content-filtering"
           />
           
           <SafetyTipCard
@@ -81,6 +87,7 @@ const WiFiSafety = () => {
             description="Set up time-based access rules to limit when certain devices can access the internet. This helps enforce healthy screen time limits automatically."
             icon={<Settings />}
             level="intermediate"
+            to="/instructions/time-restrictions"
           />
           
           <SafetyTipCard
@@ -88,6 +95,7 @@ const WiFiSafety = () => {
             description="Identify your children's devices by their MAC addresses and set specific access rules for each. This allows you to customize internet access for each family member."
             icon={<Smartphone />}
             level="advanced"
+            to="/instructions/device-control"
           />
           
           <SafetyTipCard
@@ -95,6 +103,7 @@ const WiFiSafety = () => {
             description="Some routers provide reports on internet usage. Review these regularly to understand your children's online habits and identify any concerns."
             icon={<Lock />}
             level="advanced"
+            to="/instructions/activity-monitoring"
           />
         </div>
         
@@ -111,6 +120,7 @@ const WiFiSafety = () => {
             description="Consider using a service like OpenDNS Family Shield or CleanBrowsing that filters content at the DNS level. Change your router's DNS settings to use these services."
             icon={<Shield />}
             level="advanced"
+            to="/instructions/dns-filtering"
           />
           
           <SafetyTipCard
@@ -118,6 +128,7 @@ const WiFiSafety = () => {
             description="Products like Circle by Disney connect to your router to provide comprehensive parental controls across all devices, including detailed reporting and time management."
             icon={<Settings />}
             level="advanced"
+            to="/instructions/parental-devices"
           />
         </div>
       </div>
