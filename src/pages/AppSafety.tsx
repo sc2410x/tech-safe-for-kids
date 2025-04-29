@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link, Shield, Settings, Lock, Eye, AlertTriangle } from 'lucide-react';
+import { Link, Shield, Settings, Lock, Eye, AlertTriangle, Smartphone } from 'lucide-react';
 import Layout from '@/components/Layout';
 import SectionHeader from '@/components/SectionHeader';
 import SafetyTipCard from '@/components/SafetyTipCard';
