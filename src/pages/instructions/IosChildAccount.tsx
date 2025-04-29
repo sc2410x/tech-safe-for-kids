@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Child, Star, Shield, Lock, Bell } from 'lucide-react';
+import { Baby, Star, Shield, Lock, Bell } from 'lucide-react';
 import InstructionLayout from '@/components/InstructionLayout';
 
 const IosChildAccount = () => {
@@ -8,7 +8,7 @@ const IosChildAccount = () => {
     <InstructionLayout
       title="Setting Up a Child Account on iOS"
       subtitle="Create and manage a dedicated Apple ID for your child with parental controls"
-      icon={<Child size={80} className="text-kid-blue" />}
+      icon={<Baby size={80} className="text-kid-blue" />}
       backLink="/devices"
       backText="Device Safety"
       color="blue"

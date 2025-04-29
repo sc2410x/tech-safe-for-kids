@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Smartphone, Shield, Settings, Lock, Eye, Bell, Child } from 'lucide-react';
+import { Smartphone, Shield, Settings, Lock, Eye, Bell, Baby } from 'lucide-react';
 import Layout from '@/components/Layout';
 import SectionHeader from '@/components/SectionHeader';
 import SafetyTipCard from '@/components/SafetyTipCard';
@@ -63,11 +62,11 @@ const DeviceSafety = () => {
             level="intermediate"
           />
 
-          {/* New Card for Child Account Setup */}
+          {/* Child Account Setup */}
           <SafetyTipCard
             title="Set Up a Child Account"
             description="Learn how to create and configure a dedicated child account on iOS devices using Apple Family Sharing and parental controls."
-            icon={<Child />}
+            icon={<Baby />}
             level="beginner"
             to="/instructions/ios-child-account"
           />
@@ -110,11 +109,11 @@ const DeviceSafety = () => {
             level="intermediate"
           />
 
-          {/* New Card for Android Child Account */}
+          {/* Android Child Account */}
           <SafetyTipCard
             title="Set Up a Child Account"
             description="Create and configure a dedicated child account on Android devices using Google Family Link for improved safety and monitoring."
-            icon={<Child />}
+            icon={<Baby />}
             level="beginner"
             to="/instructions/android-child-account"
           />

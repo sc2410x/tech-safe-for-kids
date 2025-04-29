@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Child, Star, Shield, Smartphone, Bell } from 'lucide-react';
+import { Baby, Star, Shield, Smartphone, Bell } from 'lucide-react';
 import InstructionLayout from '@/components/InstructionLayout';
 
 const AndroidChildAccount = () => {
@@ -8,7 +8,7 @@ const AndroidChildAccount = () => {
     <InstructionLayout
       title="Setting Up a Child Account on Android"
       subtitle="Create and manage a dedicated Google account for your child with parental controls"
-      icon={<Child size={80} className="text-kid-teal" />}
+      icon={<Baby size={80} className="text-kid-teal" />}
       backLink="/devices"
       backText="Device Safety"
       color="teal"
