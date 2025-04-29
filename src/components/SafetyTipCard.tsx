@@ -29,16 +29,25 @@ const SafetyTipCard = ({
     intermediate: 'border-l-kid-teal',
     advanced: 'border-l-kid-purple',
   };
+  
+  const levelBadges = {
+    beginner: <span className="bg-kid-blue/20 text-kid-blue-dark px-2 py-0.5 rounded-full text-xs font-medium">Beginner</span>,
+    intermediate: <span className="bg-kid-teal/20 text-kid-teal-dark px-2 py-0.5 rounded-full text-xs font-medium">Intermediate</span>,
+    advanced: <span className="bg-kid-purple/20 text-kid-purple-dark px-2 py-0.5 rounded-full text-xs font-medium">Advanced</span>,
+  };
 
   // Create the content that will be shared between Link and div
   const cardContent = (
     <Card className={cn('card-shadow border-l-4 h-full', levelColors[level])}>
       <CardHeader className="pb-2">
         <div className="flex items-start justify-between">
-          <CardTitle className="text-xl font-bold">{title}</CardTitle>
+          <div>
+            <CardTitle className="text-xl font-bold mb-1">{title}</CardTitle>
+            {levelBadges[level]}
+          </div>
           <div className="flex items-center">
             {icon && <div className="text-kid-blue-dark mr-2">{icon}</div>}
-            {to && <ArrowRight size={18} className="text-gray-400" />}
+            {to && <div className="bg-gray-100 p-1 rounded-full"><ArrowRight size={18} className="text-gray-500" /></div>}
           </div>
         </div>
       </CardHeader>
