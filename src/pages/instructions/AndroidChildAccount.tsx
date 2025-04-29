@@ -64,8 +64,8 @@ const AndroidChildAccount = () => {
             <p className="font-medium">On your child's device:</p>
             <ol className="list-decimal list-inside space-y-2">
               <li>If it's a new device, follow the initial setup process until you reach the Google sign-in screen</li>
-              <li>If it's an existing device, go to <strong>Settings</strong> > <strong>Accounts</strong> and remove any existing accounts</li>
-              <li>Download the <strong>Google Family Link for children & teens</strong> app from the Play Store</li>
+              <li>If it's an existing device, go to <strong>Settings</strong> {'>>'} <strong>Accounts</strong> and remove any existing accounts</li>
+              <li>Download the <strong>Google Family Link for children &amp; teens</strong> app from the Play Store</li>
               <li>Open the app and sign in with your child's new Google account credentials</li>
               <li>A code will appear on the child's device</li>
               <li>On your device, enter this code when prompted in your Family Link parent app</li>

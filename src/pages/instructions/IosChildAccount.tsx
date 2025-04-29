@@ -63,7 +63,7 @@ const IosChildAccount = () => {
           <div className="bg-gray-50 p-4 rounded-lg space-y-2">
             <p className="font-medium">After creating the account, configure Screen Time:</p>
             <ol className="list-decimal list-inside space-y-2">
-              <li>Go to <strong>Settings</strong> > <strong>Screen Time</strong></li>
+              <li>Go to <strong>Settings</strong> {'>>'} <strong>Screen Time</strong></li>
               <li>Tap <strong>Turn On Screen Time</strong> if not already enabled</li>
               <li>Select <strong>This is My Child's [Device]</strong></li>
               <li>Configure the following settings as needed:</li>
@@ -72,7 +72,7 @@ const IosChildAccount = () => {
                 <li><strong>App Limits:</strong> Set time limits for app categories</li>
                 <li><strong>Communication Limits:</strong> Control who your child can communicate with</li>
                 <li><strong>Always Allowed:</strong> Apps that are always accessible</li>
-                <li><strong>Content & Privacy Restrictions:</strong> Limit adult content and purchases</li>
+                <li><strong>Content &amp; Privacy Restrictions:</strong> Limit adult content and purchases</li>
               </ul>
             </ol>
           </div>
