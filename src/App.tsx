@@ -14,6 +14,8 @@ import NotFound from "./pages/NotFound";
 // Instruction Pages
 import ChangeRouterPassword from "./pages/instructions/ChangeRouterPassword";
 import ContentFiltering from "./pages/instructions/ContentFiltering";
+import IosChildAccount from "./pages/instructions/IosChildAccount";
+import AndroidChildAccount from "./pages/instructions/AndroidChildAccount";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,8 @@ const App = () => (
           {/* Instruction Routes */}
           <Route path="/instructions/change-router-password" element={<ChangeRouterPassword />} />
           <Route path="/instructions/content-filtering" element={<ContentFiltering />} />
+          <Route path="/instructions/ios-child-account" element={<IosChildAccount />} />
+          <Route path="/instructions/android-child-account" element={<AndroidChildAccount />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

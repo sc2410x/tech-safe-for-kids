@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Smartphone, Shield, Settings, Lock, Eye, Bell } from 'lucide-react';
+import { Smartphone, Shield, Settings, Lock, Eye, Bell, Child } from 'lucide-react';
 import Layout from '@/components/Layout';
 import SectionHeader from '@/components/SectionHeader';
 import SafetyTipCard from '@/components/SafetyTipCard';
@@ -9,9 +9,10 @@ const DeviceSafety = () => {
   return (
     <Layout>
       <div className="section-container">
-        {/* Hero Section */}
-        <div className="bg-kid-teal-light rounded-2xl p-8 mb-12">
-          <div className="flex flex-col md:flex-row items-center md:space-x-8">
+        {/* Hero Section with improved background */}
+        <div className="bg-kid-teal-light rounded-2xl p-8 mb-12 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1591348278999-ee1d0c8e195f')] bg-cover bg-center opacity-15"></div>
+          <div className="flex flex-col md:flex-row items-center md:space-x-8 relative z-10">
             <div className="mb-8 md:mb-0 md:w-1/4 flex justify-center">
               <Smartphone size={120} className="text-kid-teal" />
             </div>
@@ -37,6 +38,7 @@ const DeviceSafety = () => {
             description="Go to Settings > Screen Time to enable parental controls. Set a passcode that's different from the device passcode to prevent children from changing settings."
             icon={<Settings />}
             level="beginner"
+            to="/instructions/ios-screen-time"
           />
           
           <SafetyTipCard
@@ -44,6 +46,7 @@ const DeviceSafety = () => {
             description="Under Screen Time, enable Content & Privacy Restrictions to limit adult content, purchases, downloads, and privacy settings changes."
             icon={<Shield />}
             level="beginner"
+            to="/instructions/ios-content-restrictions"
           />
           
           <SafetyTipCard
@@ -58,6 +61,15 @@ const DeviceSafety = () => {
             description="Restrict who children can communicate with during allowed screen time and downtime, helping prevent contact with strangers."
             icon={<Lock />}
             level="intermediate"
+          />
+
+          {/* New Card for Child Account Setup */}
+          <SafetyTipCard
+            title="Set Up a Child Account"
+            description="Learn how to create and configure a dedicated child account on iOS devices using Apple Family Sharing and parental controls."
+            icon={<Child />}
+            level="beginner"
+            to="/instructions/ios-child-account"
           />
         </div>
         
@@ -74,6 +86,7 @@ const DeviceSafety = () => {
             description="Download Google Family Link on both your device and your child's. Create a Google account for your child and link it to your Family Link parent account."
             icon={<Smartphone />}
             level="beginner"
+            to="/instructions/android-family-link"
           />
           
           <SafetyTipCard
@@ -95,6 +108,15 @@ const DeviceSafety = () => {
             description="Family Link allows you to see your child's device location, helping ensure they're where they're supposed to be."
             icon={<Lock />}
             level="intermediate"
+          />
+
+          {/* New Card for Android Child Account */}
+          <SafetyTipCard
+            title="Set Up a Child Account"
+            description="Create and configure a dedicated child account on Android devices using Google Family Link for improved safety and monitoring."
+            icon={<Child />}
+            level="beginner"
+            to="/instructions/android-child-account"
           />
         </div>
         
