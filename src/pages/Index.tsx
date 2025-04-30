@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Wifi, Smartphone, Link as LinkIcon, ArrowRight, Baby, Shield, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -51,7 +52,7 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-white text-white hover:bg-white/20 hover:border-white/80 hover:scale-105 transition-all duration-300"
+                className="border-white text-white bg-kid-blue-dark/40 hover:bg-kid-blue-dark/60 hover:border-white/80 hover:scale-105 transition-all duration-300"
                 asChild
               >
                 <a href="#why-it-matters">Why It Matters</a>
