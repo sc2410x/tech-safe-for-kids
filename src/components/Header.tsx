@@ -26,7 +26,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white shadow-sm sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 group">
           <div className="bg-gradient-to-br from-kid-blue to-kid-purple rounded-full p-2 shadow-md transform transition-all duration-300 group-hover:scale-110">
@@ -45,9 +45,11 @@ const Header = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link to="/" className="text-gray-700 hover:text-kid-blue font-medium px-4 py-2 rounded-md hover:bg-gray-50 transition-colors">
-                  Home
-                </Link>
+                <NavigationMenuLink asChild>
+                  <Link to="/" className="text-gray-700 hover:text-kid-blue font-medium px-4 py-2 rounded-md hover:bg-gray-50 transition-colors inline-block">
+                    Home
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
               
               {/* WiFi Safety Dropdown */}
@@ -56,37 +58,35 @@ const Header = () => {
                   WiFi Safety
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="p-4 w-[220px]">
-                    <ul className="space-y-2">
-                      <li>
-                        <Link 
-                          to="/wifi"
-                          className="block rounded-md p-2 hover:bg-gray-50 text-sm font-medium"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          WiFi Safety Overview
-                        </Link>
-                      </li>
-                      <li>
-                        <Link 
-                          to="/instructions/change-router-password"
-                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          Change Router Password
-                        </Link>
-                      </li>
-                      <li>
-                        <Link 
-                          to="/instructions/content-filtering"
-                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          Content Filtering
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
+                  <ul className="p-4 w-[220px] grid gap-3">
+                    <li>
+                      <Link 
+                        to="/wifi"
+                        className="block rounded-md p-2 hover:bg-gray-50 text-sm font-medium"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        WiFi Safety Overview
+                      </Link>
+                    </li>
+                    <li>
+                      <Link 
+                        to="/instructions/change-router-password"
+                        className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Change Router Password
+                      </Link>
+                    </li>
+                    <li>
+                      <Link 
+                        to="/instructions/content-filtering"
+                        className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Content Filtering
+                      </Link>
+                    </li>
+                  </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               
@@ -96,64 +96,62 @@ const Header = () => {
                   Device Safety
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="p-4 w-[220px]">
-                    <ul className="space-y-2">
-                      <li>
-                        <Link 
-                          to="/devices"
-                          className="block rounded-md p-2 hover:bg-gray-50 text-sm font-medium"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          Device Safety Overview
-                        </Link>
-                      </li>
-                      <li>
-                        <Link 
-                          to="/instructions/ios-child-account"
-                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          iOS Child Account
-                        </Link>
-                      </li>
-                      <li>
-                        <Link 
-                          to="/instructions/ios-screen-time"
-                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          iOS Screen Time
-                        </Link>
-                      </li>
-                      <li>
-                        <Link 
-                          to="/instructions/ios-content-restrictions"
-                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          iOS Content Restrictions
-                        </Link>
-                      </li>
-                      <li>
-                        <Link 
-                          to="/instructions/android-child-account"
-                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          Android Child Account
-                        </Link>
-                      </li>
-                      <li>
-                        <Link 
-                          to="/instructions/android-family-link"
-                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          Android Family Link
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
+                  <ul className="p-4 w-[220px] grid gap-3">
+                    <li>
+                      <Link 
+                        to="/devices"
+                        className="block rounded-md p-2 hover:bg-gray-50 text-sm font-medium"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Device Safety Overview
+                      </Link>
+                    </li>
+                    <li>
+                      <Link 
+                        to="/instructions/ios-child-account"
+                        className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        iOS Child Account
+                      </Link>
+                    </li>
+                    <li>
+                      <Link 
+                        to="/instructions/ios-screen-time"
+                        className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        iOS Screen Time
+                      </Link>
+                    </li>
+                    <li>
+                      <Link 
+                        to="/instructions/ios-content-restrictions"
+                        className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        iOS Content Restrictions
+                      </Link>
+                    </li>
+                    <li>
+                      <Link 
+                        to="/instructions/android-child-account"
+                        className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Android Child Account
+                      </Link>
+                    </li>
+                    <li>
+                      <Link 
+                        to="/instructions/android-family-link"
+                        className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Android Family Link
+                      </Link>
+                    </li>
+                  </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               
@@ -163,27 +161,27 @@ const Header = () => {
                   App Safety
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="p-4 w-[220px]">
-                    <ul className="space-y-2">
-                      <li>
-                        <Link 
-                          to="/apps"
-                          className="block rounded-md p-2 hover:bg-gray-50 text-sm font-medium"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          App Safety Overview
-                        </Link>
-                      </li>
-                      {/* Add app safety specific links when available */}
-                    </ul>
-                  </div>
+                  <ul className="p-4 w-[220px] grid gap-3">
+                    <li>
+                      <Link 
+                        to="/apps"
+                        className="block rounded-md p-2 hover:bg-gray-50 text-sm font-medium"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        App Safety Overview
+                      </Link>
+                    </li>
+                    {/* Add app safety specific links when available */}
+                  </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/resources" className="text-gray-700 hover:text-kid-blue font-medium px-4 py-2 rounded-md hover:bg-gray-50 transition-colors">
-                  Resources
-                </Link>
+                <NavigationMenuLink asChild>
+                  <Link to="/resources" className="text-gray-700 hover:text-kid-blue font-medium px-4 py-2 rounded-md hover:bg-gray-50 transition-colors inline-block">
+                    Resources
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
