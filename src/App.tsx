@@ -16,6 +16,9 @@ import ChangeRouterPassword from "./pages/instructions/ChangeRouterPassword";
 import ContentFiltering from "./pages/instructions/ContentFiltering";
 import IosChildAccount from "./pages/instructions/IosChildAccount";
 import AndroidChildAccount from "./pages/instructions/AndroidChildAccount";
+import IosScreenTime from "./pages/instructions/IosScreenTime";
+import IosContentRestrictions from "./pages/instructions/IosContentRestrictions";
+import AndroidFamilyLink from "./pages/instructions/AndroidFamilyLink";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +40,9 @@ const App = () => (
           <Route path="/instructions/content-filtering" element={<ContentFiltering />} />
           <Route path="/instructions/ios-child-account" element={<IosChildAccount />} />
           <Route path="/instructions/android-child-account" element={<AndroidChildAccount />} />
+          <Route path="/instructions/ios-screen-time" element={<IosScreenTime />} />
+          <Route path="/instructions/ios-content-restrictions" element={<IosContentRestrictions />} />
+          <Route path="/instructions/android-family-link" element={<AndroidFamilyLink />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

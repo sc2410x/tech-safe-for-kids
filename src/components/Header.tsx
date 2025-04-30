@@ -49,72 +49,74 @@ const Header = () => {
                 <NavigationMenuTrigger className="text-gray-700 hover:text-kid-blue font-medium">
                   Safety Guides
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                    <li className="row-span-3">
-                      <NavigationMenuLink asChild>
-                        <Link
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-kid-blue/20 to-kid-teal-light/30 p-6 no-underline outline-none focus:shadow-md"
-                          to="/wifi"
-                        >
-                          <Wifi className="h-6 w-6 text-kid-blue" />
-                          <div className="mb-2 mt-4 text-lg font-medium text-kid-blue-dark">
-                            Home WiFi Safety
-                          </div>
-                          <p className="text-sm leading-tight text-gray-600">
-                            Secure your home network and set up parental controls on your router
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/devices"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-50 focus:bg-gray-50"
-                        >
-                          <div className="text-sm font-medium leading-none text-kid-teal-dark">
-                            <Smartphone className="h-4 w-4 inline-block mr-2" />
-                            Phones & Tablets
-                          </div>
-                          <p className="line-clamp-2 text-sm leading-snug text-gray-500">
-                            Configure device-level controls for mobile devices
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/apps"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-50 focus:bg-gray-50"
-                        >
-                          <div className="text-sm font-medium leading-none text-kid-purple-dark">
-                            <Baby className="h-4 w-4 inline-block mr-2" />
-                            Apps & Websites
-                          </div>
-                          <p className="line-clamp-2 text-sm leading-snug text-gray-500">
-                            Learn which apps are safe and how to manage accounts
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to="/resources"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-50 focus:bg-gray-50"
-                        >
-                          <div className="text-sm font-medium leading-none">
-                            Resources
-                          </div>
-                          <p className="line-clamp-2 text-sm leading-snug text-gray-500">
-                            Additional guides and tools for parents
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
+                <NavigationMenuContent className="w-screen">
+                  <div className="w-full max-w-7xl mx-auto px-4">
+                    <ul className="grid w-full gap-3 p-4 md:grid-cols-2 lg:grid-cols-3">
+                      <li className="lg:col-span-1">
+                        <NavigationMenuLink asChild>
+                          <Link
+                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-kid-blue/20 to-kid-teal-light/30 p-6 no-underline outline-none focus:shadow-md"
+                            to="/wifi"
+                          >
+                            <Wifi className="h-6 w-6 text-kid-blue" />
+                            <div className="mb-2 mt-4 text-lg font-medium text-kid-blue-dark">
+                              Home WiFi Safety
+                            </div>
+                            <p className="text-sm leading-tight text-gray-600">
+                              Secure your home network and set up parental controls on your router
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/devices"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-50 focus:bg-gray-50"
+                          >
+                            <div className="text-sm font-medium leading-none text-kid-teal-dark">
+                              <Smartphone className="h-4 w-4 inline-block mr-2" />
+                              Phones & Tablets
+                            </div>
+                            <p className="line-clamp-2 text-sm leading-snug text-gray-500">
+                              Configure device-level controls for mobile devices
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/apps"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-50 focus:bg-gray-50"
+                          >
+                            <div className="text-sm font-medium leading-none text-kid-purple-dark">
+                              <Baby className="h-4 w-4 inline-block mr-2" />
+                              Apps & Websites
+                            </div>
+                            <p className="line-clamp-2 text-sm leading-snug text-gray-500">
+                              Learn which apps are safe and how to manage accounts
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/resources"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-50 focus:bg-gray-50"
+                          >
+                            <div className="text-sm font-medium leading-none">
+                              Resources
+                            </div>
+                            <p className="line-clamp-2 text-sm leading-snug text-gray-500">
+                              Additional guides and tools for parents
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    </ul>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
