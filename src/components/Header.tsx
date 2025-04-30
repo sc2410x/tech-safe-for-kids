@@ -31,7 +31,7 @@ const Header = () => {
             </div>
           </div>
           <div>
-            <span className="text-xl font-bold bg-gradient-to-r from-kid-blue-dark to-kid-purple-dark bg-clip-text text-transparent font-display">KidSafeWeb</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-kid-blue-dark to-kid-purple-dark bg-clip-text text-transparent font-display">TechSafeForKids</span>
             <span className="block text-xs text-gray-500 -mt-1">Protect what matters most</span>
           </div>
         </Link>
