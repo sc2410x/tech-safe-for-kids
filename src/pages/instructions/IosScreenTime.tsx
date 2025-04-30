@@ -46,6 +46,7 @@ const IosScreenTime = () => {
         { title: "Content & Privacy Restrictions", link: "/instructions/ios-content-restrictions" },
         { title: "Set Up a Child Account", link: "/instructions/ios-child-account" }
       ]}
+      icon={<Clock size={64} className="text-kid-blue" />}
     />
   );
 };

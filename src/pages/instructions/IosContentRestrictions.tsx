@@ -66,6 +66,7 @@ const IosContentRestrictions = () => {
         { title: "Set Up Screen Time", link: "/instructions/ios-screen-time" },
         { title: "Set Up a Child Account", link: "/instructions/ios-child-account" }
       ]}
+      icon={<Lock size={64} className="text-kid-blue" />}
     />
   );
 };

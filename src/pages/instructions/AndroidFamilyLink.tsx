@@ -50,6 +50,7 @@ const AndroidFamilyLink = () => {
       relatedInstructions={[
         { title: "Set Up a Child Account", link: "/instructions/android-child-account" }
       ]}
+      icon={<Smartphone size={64} className="text-kid-teal" />}
     />
   );
 };
