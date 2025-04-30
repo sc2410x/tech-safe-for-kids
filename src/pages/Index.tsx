@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Wifi, Smartphone, Link as LinkIcon, ArrowRight, Family, Shield, Heart } from 'lucide-react';
+import { Wifi, Smartphone, Link as LinkIcon, ArrowRight, Baby, Shield, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Layout from '@/components/Layout';
 import SectionHeader from '@/components/SectionHeader';

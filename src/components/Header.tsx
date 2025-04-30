@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Menu, X, Heart, Family } from 'lucide-react';
+import { Shield, Menu, X, Heart, Baby, Wifi, Smartphone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
@@ -90,7 +90,7 @@ const Header = () => {
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-50 focus:bg-gray-50"
                         >
                           <div className="text-sm font-medium leading-none text-kid-purple-dark">
-                            <Family className="h-4 w-4 inline-block mr-2" />
+                            <Baby className="h-4 w-4 inline-block mr-2" />
                             Apps & Websites
                           </div>
                           <p className="line-clamp-2 text-sm leading-snug text-gray-500">
