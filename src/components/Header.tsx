@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Menu, X, Heart, Baby, Wifi, Smartphone } from 'lucide-react';
+import { Shield, Menu, X, Heart, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   NavigationMenu,
@@ -11,14 +11,12 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
 import { cn } from '@/lib/utils';
+import { 
+  Collapsible, 
+  CollapsibleContent, 
+  CollapsibleTrigger 
+} from '@/components/ui/collapsible';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -52,97 +50,134 @@ const Header = () => {
                 </Link>
               </NavigationMenuItem>
               
+              {/* WiFi Safety Dropdown */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-gray-700 hover:text-kid-blue font-medium">
-                  Safety Guides
+                  WiFi Safety
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="w-screen">
-                  <div className="w-full max-w-7xl mx-auto px-4">
-                    <ul className="grid w-full gap-3 p-4 md:grid-cols-2 lg:grid-cols-3">
-                      <li className="lg:col-span-1">
-                        <NavigationMenuLink asChild>
-                          <Link
-                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-kid-blue/20 to-kid-teal-light/30 p-6 no-underline outline-none focus:shadow-md"
-                            to="/wifi"
-                          >
-                            <Wifi className="h-6 w-6 text-kid-blue" />
-                            <div className="mb-2 mt-4 text-lg font-medium text-kid-blue-dark">
-                              Home WiFi Safety
-                            </div>
-                            <p className="text-sm leading-tight text-gray-600">
-                              Secure your home network and set up parental controls on your router
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
+                <NavigationMenuContent>
+                  <div className="p-4 w-[220px]">
+                    <ul className="space-y-2">
+                      <li>
+                        <Link 
+                          to="/wifi"
+                          className="block rounded-md p-2 hover:bg-gray-50 text-sm font-medium"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          WiFi Safety Overview
+                        </Link>
                       </li>
                       <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to="/devices"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-50 focus:bg-gray-50"
-                          >
-                            <div className="text-sm font-medium leading-none text-kid-teal-dark">
-                              <Smartphone className="h-4 w-4 inline-block mr-2" />
-                              Phones & Tablets
-                            </div>
-                            <p className="line-clamp-2 text-sm leading-snug text-gray-500">
-                              Configure device-level controls for mobile devices
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
+                        <Link 
+                          to="/instructions/change-router-password"
+                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          Change Router Password
+                        </Link>
                       </li>
                       <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to="/apps"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-50 focus:bg-gray-50"
-                          >
-                            <div className="text-sm font-medium leading-none text-kid-purple-dark">
-                              <Baby className="h-4 w-4 inline-block mr-2" />
-                              Apps & Websites
-                            </div>
-                            <p className="line-clamp-2 text-sm leading-snug text-gray-500">
-                              Learn which apps are safe and how to manage accounts
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                      <li>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            to="/resources"
-                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-50 focus:bg-gray-50"
-                          >
-                            <div className="text-sm font-medium leading-none">
-                              Resources
-                            </div>
-                            <p className="line-clamp-2 text-sm leading-snug text-gray-500">
-                              Additional guides and tools for parents
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
+                        <Link 
+                          to="/instructions/content-filtering"
+                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          Content Filtering
+                        </Link>
                       </li>
                     </ul>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               
+              {/* Device Safety Dropdown */}
               <NavigationMenuItem>
-                <Link to="/wifi" className="text-gray-700 hover:text-kid-blue font-medium px-4 py-2 rounded-md hover:bg-gray-50 transition-colors">
-                  WiFi Safety
-                </Link>
-              </NavigationMenuItem>
-              
-              <NavigationMenuItem>
-                <Link to="/devices" className="text-gray-700 hover:text-kid-blue font-medium px-4 py-2 rounded-md hover:bg-gray-50 transition-colors">
+                <NavigationMenuTrigger className="text-gray-700 hover:text-kid-blue font-medium">
                   Device Safety
-                </Link>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="p-4 w-[220px]">
+                    <ul className="space-y-2">
+                      <li>
+                        <Link 
+                          to="/devices"
+                          className="block rounded-md p-2 hover:bg-gray-50 text-sm font-medium"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          Device Safety Overview
+                        </Link>
+                      </li>
+                      <li>
+                        <Link 
+                          to="/instructions/ios-child-account"
+                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          iOS Child Account
+                        </Link>
+                      </li>
+                      <li>
+                        <Link 
+                          to="/instructions/ios-screen-time"
+                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          iOS Screen Time
+                        </Link>
+                      </li>
+                      <li>
+                        <Link 
+                          to="/instructions/ios-content-restrictions"
+                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          iOS Content Restrictions
+                        </Link>
+                      </li>
+                      <li>
+                        <Link 
+                          to="/instructions/android-child-account"
+                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          Android Child Account
+                        </Link>
+                      </li>
+                      <li>
+                        <Link 
+                          to="/instructions/android-family-link"
+                          className="block rounded-md p-2 hover:bg-gray-50 text-sm"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          Android Family Link
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </NavigationMenuContent>
               </NavigationMenuItem>
               
+              {/* App Safety Dropdown */}
               <NavigationMenuItem>
-                <Link to="/apps" className="text-gray-700 hover:text-kid-blue font-medium px-4 py-2 rounded-md hover:bg-gray-50 transition-colors">
+                <NavigationMenuTrigger className="text-gray-700 hover:text-kid-blue font-medium">
                   App Safety
-                </Link>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="p-4 w-[220px]">
+                    <ul className="space-y-2">
+                      <li>
+                        <Link 
+                          to="/apps"
+                          className="block rounded-md p-2 hover:bg-gray-50 text-sm font-medium"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          App Safety Overview
+                        </Link>
+                      </li>
+                      {/* Add app safety specific links when available */}
+                    </ul>
+                  </div>
+                </NavigationMenuContent>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
@@ -169,43 +204,72 @@ const Header = () => {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white shadow-lg border-t border-gray-100 animate-fade-in">
-          <div className="px-4 pt-2 pb-4 space-y-3">
+          <div className="px-4 pt-2 pb-4 space-y-1">
             <Link to="/" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
               Home
             </Link>
-            <div className="block px-4 py-2">
-              <details className="group">
-                <summary className="list-none flex justify-between items-center cursor-pointer text-base font-medium text-gray-700 hover:text-kid-blue">
-                  Safety Guides
-                  <span className="transition group-open:rotate-180">
-                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                  </span>
-                </summary>
-                <div className="mt-2 ml-4 space-y-2">
-                  <Link to="/wifi" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
-                    Home WiFi Safety
-                  </Link>
-                  <Link to="/devices" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
-                    Device Safety
-                  </Link>
-                  <Link to="/apps" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
-                    App Safety
-                  </Link>
-                  <Link to="/resources" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
-                    Resources
-                  </Link>
-                </div>
-              </details>
-            </div>
-            <Link to="/wifi" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
-              WiFi Safety
-            </Link>
-            <Link to="/devices" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
-              Device Safety
-            </Link>
-            <Link to="/apps" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
-              App Safety
-            </Link>
+            
+            {/* WiFi Safety mobile dropdown */}
+            <Collapsible className="w-full">
+              <CollapsibleTrigger className="flex justify-between items-center w-full px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md">
+                <span>WiFi Safety</span>
+                <ChevronDown className="h-4 w-4" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="pl-4">
+                <Link to="/wifi" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
+                  WiFi Safety Overview
+                </Link>
+                <Link to="/instructions/change-router-password" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
+                  Change Router Password
+                </Link>
+                <Link to="/instructions/content-filtering" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
+                  Content Filtering
+                </Link>
+              </CollapsibleContent>
+            </Collapsible>
+            
+            {/* Device Safety mobile dropdown */}
+            <Collapsible className="w-full">
+              <CollapsibleTrigger className="flex justify-between items-center w-full px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md">
+                <span>Device Safety</span>
+                <ChevronDown className="h-4 w-4" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="pl-4">
+                <Link to="/devices" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
+                  Device Safety Overview
+                </Link>
+                <Link to="/instructions/ios-child-account" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
+                  iOS Child Account
+                </Link>
+                <Link to="/instructions/ios-screen-time" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
+                  iOS Screen Time
+                </Link>
+                <Link to="/instructions/ios-content-restrictions" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
+                  iOS Content Restrictions
+                </Link>
+                <Link to="/instructions/android-child-account" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
+                  Android Child Account
+                </Link>
+                <Link to="/instructions/android-family-link" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
+                  Android Family Link
+                </Link>
+              </CollapsibleContent>
+            </Collapsible>
+            
+            {/* App Safety mobile dropdown */}
+            <Collapsible className="w-full">
+              <CollapsibleTrigger className="flex justify-between items-center w-full px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md">
+                <span>App Safety</span>
+                <ChevronDown className="h-4 w-4" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="pl-4">
+                <Link to="/apps" className="block px-4 py-2 text-sm text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
+                  App Safety Overview
+                </Link>
+                {/* Add app safety specific links when available */}
+              </CollapsibleContent>
+            </Collapsible>
+            
             <Link to="/resources" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-blue hover:bg-gray-50 rounded-md" onClick={() => setMobileMenuOpen(false)}>
               Resources
             </Link>
