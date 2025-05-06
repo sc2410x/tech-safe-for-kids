@@ -81,8 +81,8 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Nunito', 'sans-serif'],
-				display: ['Quicksand', 'sans-serif'],
+				sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+				display: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

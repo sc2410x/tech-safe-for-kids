@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -53,23 +52,29 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold text-foreground;
+    letter-spacing: -0.02em;
   }
   
   h1 {
     @apply text-4xl md:text-5xl mb-6;
+    font-weight: 700;
   }
   
   h2 {
     @apply text-3xl md:text-4xl mb-4;
+    font-weight: 600;
   }
   
   h3 {
     @apply text-2xl md:text-3xl mb-3;
+    font-weight: 600;
   }
   
   .section-container {
@@ -95,7 +100,9 @@
   }
 
   .font-display {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
   }
 }
 
