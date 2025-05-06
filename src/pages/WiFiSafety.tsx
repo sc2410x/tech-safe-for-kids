@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Wifi, Shield, Settings, Lock, Smartphone } from 'lucide-react';
+import { Wifi, Shield, Settings, Lock, Smartphone, WifiHigh, Router, Clock } from 'lucide-react';
 import Layout from '@/components/Layout';
 import SectionHeader from '@/components/SectionHeader';
 import SafetyTipCard from '@/components/SafetyTipCard';
