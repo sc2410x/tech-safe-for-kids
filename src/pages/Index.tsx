@@ -21,13 +21,6 @@ const Index = () => {
         
         <div className="section-container relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <div className="inline-block mb-6 p-2 bg-white/30 backdrop-blur-sm rounded-full">
-              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm">
-                <Shield size={18} className="text-kid-blue" />
-                <span className="text-sm font-semibold text-gray-700">Trusted by thousands of parents</span>
-              </div>
-            </div>
-            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-md text-white font-display">
               Keep Your Kids <span className="text-white relative">
                 Safe
