@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Wifi, Shield, Settings, Lock, Smartphone, WifiHigh, Router, Clock } from 'lucide-react';
+import { Wifi, Shield, Settings, Lock, Smartphone, WifiHigh, Router, Clock, Globe, Network } from 'lucide-react';
 import Layout from '@/components/Layout';
 import SectionHeader from '@/components/SectionHeader';
 import SafetyTipCard from '@/components/SafetyTipCard';
@@ -130,6 +129,111 @@ const WiFiSafety = () => {
             level="advanced"
             to="/instructions/parental-devices"
           />
+        </div>
+        
+        {/* Mesh WiFi Systems */}
+        <SectionHeader 
+          title="Mesh WiFi Systems" 
+          subtitle="Enhanced protection with modern mesh WiFi networks"
+          align="left"
+        />
+        
+        <div className="bg-gradient-to-r from-kid-blue-light/30 to-kid-purple-light/30 rounded-2xl p-6 mb-8">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="md:w-1/4 flex justify-center">
+              <WifiHigh size={80} className="text-kid-blue" />
+            </div>
+            <div className="md:w-3/4">
+              <h3 className="text-2xl font-bold mb-3">What is Mesh WiFi?</h3>
+              <p className="text-gray-700 mb-4">
+                Mesh WiFi systems use multiple devices (nodes) to create a single, seamless WiFi network throughout your home, 
+                eliminating dead zones and providing consistent coverage. These modern systems often come with powerful parental 
+                control features built directly into their companion apps.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <SafetyTipCard
+            title="Family Profiles with Eero"
+            description="Eero's mesh WiFi system allows you to create individual profiles for each family member. You can then apply specific rules, content filters, and time schedules to each profile separately."
+            icon={<Network />}
+            level="intermediate"
+            to="/instructions/mesh-eero-profiles"
+          />
+          
+          <SafetyTipCard
+            title="Content Filtering by Category"
+            description="Eero and similar mesh systems offer content filtering by categories such as adult, illegal, violent, or social media content. This filtering works across all devices on your network without installing additional software."
+            icon={<Shield />}
+            level="intermediate"
+            to="/instructions/mesh-content-filtering"
+          />
+          
+          <SafetyTipCard
+            title="Scheduled Pauses"
+            description="Set automatic internet pauses during bedtime, homework, or dinner time. Eero lets you schedule these pauses for individual profiles or the entire network, encouraging healthy tech habits."
+            icon={<Clock />}
+            level="beginner"
+            to="/instructions/mesh-scheduled-pauses"
+          />
+          
+          <SafetyTipCard
+            title="Usage Insights"
+            description="Monitor your children's internet usage with detailed reports showing which devices are most active and when. These insights help you have informed conversations about healthy online habits."
+            icon={<Globe />}
+            level="advanced"
+            to="/instructions/mesh-usage-insights"
+          />
+        </div>
+        
+        <div className="bg-gray-50 rounded-2xl p-6 mb-12">
+          <h3 className="text-2xl font-bold mb-4">Popular Mesh WiFi Systems Comparison</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b-2 border-gray-200">
+                  <th className="text-left px-4 py-2">System</th>
+                  <th className="text-left px-4 py-2">Parental Controls</th>
+                  <th className="text-left px-4 py-2">Content Filtering</th>
+                  <th className="text-left px-4 py-2">User Profiles</th>
+                  <th className="text-left px-4 py-2">Time Scheduling</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-100">
+                  <td className="px-4 py-3 font-medium">Eero</td>
+                  <td className="px-4 py-3">Advanced</td>
+                  <td className="px-4 py-3">✅ (with subscription)</td>
+                  <td className="px-4 py-3">✅</td>
+                  <td className="px-4 py-3">✅</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="px-4 py-3 font-medium">Google Nest WiFi</td>
+                  <td className="px-4 py-3">Good</td>
+                  <td className="px-4 py-3">✅</td>
+                  <td className="px-4 py-3">✅</td>
+                  <td className="px-4 py-3">✅</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="px-4 py-3 font-medium">Netgear Orbi</td>
+                  <td className="px-4 py-3">Advanced</td>
+                  <td className="px-4 py-3">✅ (with subscription)</td>
+                  <td className="px-4 py-3">✅</td>
+                  <td className="px-4 py-3">✅</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-3 font-medium">TP-Link Deco</td>
+                  <td className="px-4 py-3">Good</td>
+                  <td className="px-4 py-3">✅</td>
+                  <td className="px-4 py-3">✅</td>
+                  <td className="px-4 py-3">✅</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-sm text-gray-600">Note: Features may vary based on model and firmware version. Check manufacturer websites for specific details.</p>
         </div>
       </div>
     </Layout>
