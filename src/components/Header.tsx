@@ -53,12 +53,12 @@ const Header = () => {
               </NavigationMenuItem>
               
               {/* WiFi Safety Dropdown */}
-              <NavigationMenuItem>
+              <NavigationMenuItem className="relative">
                 <NavigationMenuTrigger className="text-gray-700 hover:text-kid-blue font-medium">
                   WiFi Safety
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="p-4 w-[220px] grid gap-3">
+                <NavigationMenuContent className="absolute left-0 w-[220px]">
+                  <ul className="p-4 grid gap-3">
                     <li>
                       <Link 
                         to="/wifi"
@@ -91,12 +91,12 @@ const Header = () => {
               </NavigationMenuItem>
               
               {/* Device Safety Dropdown */}
-              <NavigationMenuItem>
+              <NavigationMenuItem className="relative">
                 <NavigationMenuTrigger className="text-gray-700 hover:text-kid-blue font-medium">
                   Device Safety
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="p-4 w-[220px] grid gap-3">
+                <NavigationMenuContent className="absolute left-0 w-[220px]">
+                  <ul className="p-4 grid gap-3">
                     <li>
                       <Link 
                         to="/devices"
@@ -156,12 +156,12 @@ const Header = () => {
               </NavigationMenuItem>
               
               {/* App Safety Dropdown */}
-              <NavigationMenuItem>
+              <NavigationMenuItem className="relative">
                 <NavigationMenuTrigger className="text-gray-700 hover:text-kid-blue font-medium">
                   App Safety
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="p-4 w-[220px] grid gap-3">
+                <NavigationMenuContent className="absolute left-0 w-[220px]">
+                  <ul className="p-4 grid gap-3">
                     <li>
                       <Link 
                         to="/apps"
