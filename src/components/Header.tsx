@@ -53,11 +53,11 @@ const Header = () => {
               </NavigationMenuItem>
               
               {/* WiFi Safety Dropdown */}
-              <NavigationMenuItem className="relative">
+              <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-gray-700 hover:text-kid-blue font-medium">
                   WiFi Safety
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="absolute left-0 w-[220px]">
+                <NavigationMenuContent className="w-[220px]">
                   <ul className="p-4 grid gap-3">
                     <li>
                       <Link 
@@ -91,11 +91,11 @@ const Header = () => {
               </NavigationMenuItem>
               
               {/* Device Safety Dropdown */}
-              <NavigationMenuItem className="relative">
+              <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-gray-700 hover:text-kid-blue font-medium">
                   Device Safety
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="absolute left-0 w-[220px]">
+                <NavigationMenuContent className="w-[220px]">
                   <ul className="p-4 grid gap-3">
                     <li>
                       <Link 
@@ -156,11 +156,11 @@ const Header = () => {
               </NavigationMenuItem>
               
               {/* App Safety Dropdown */}
-              <NavigationMenuItem className="relative">
+              <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-gray-700 hover:text-kid-blue font-medium">
                   App Safety
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="absolute left-0 w-[220px]">
+                <NavigationMenuContent className="w-[220px]">
                   <ul className="p-4 grid gap-3">
                     <li>
                       <Link 
