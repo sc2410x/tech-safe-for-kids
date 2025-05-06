@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link, Shield, Settings, Lock, Eye, AlertTriangle, Smartphone } from 'lucide-react';
+import { Link as LinkIcon, Shield, Settings, Lock, Eye, AlertTriangle, Smartphone } from 'lucide-react';
 import Layout from '@/components/Layout';
 import SectionHeader from '@/components/SectionHeader';
 import SafetyTipCard from '@/components/SafetyTipCard';
@@ -13,7 +13,7 @@ const AppSafety = () => {
         <div className="bg-kid-purple-light rounded-2xl p-8 mb-12">
           <div className="flex flex-col md:flex-row items-center md:space-x-8">
             <div className="mb-8 md:mb-0 md:w-1/4 flex justify-center">
-              <Link size={120} className="text-kid-purple" />
+              <LinkIcon size={120} className="text-kid-purple" />
             </div>
             <div className="md:w-3/4">
               <h1 className="text-3xl md:text-4xl font-bold mb-4">Apps & Websites Safety</h1>
@@ -93,7 +93,7 @@ const AppSafety = () => {
           <SafetyTipCard
             title="Be a Connection"
             description="Follow or friend your children on their social accounts, but establish respectful boundaries about how you'll interact with their online presence."
-            icon={<Link />}
+            icon={<LinkIcon />}
             level="intermediate"
           />
         </div>

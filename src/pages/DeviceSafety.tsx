@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Smartphone, Shield, Settings, Lock, Eye, Bell, Baby } from 'lucide-react';
 import Layout from '@/components/Layout';
