@@ -12,17 +12,17 @@ const Resources = () => {
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-kid-blue-light via-kid-teal-light to-kid-purple-light rounded-2xl p-8 mb-12">
           <div className="text-center">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">Additional Resources</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">Additional Child Safety Resources</h1>
             <p className="text-xl text-gray-700 mb-4 max-w-3xl mx-auto">
-              Explore these trusted resources from leading organizations dedicated to children's online safety.
+              Explore these trusted resources from leading organisations dedicated to children's online safety and wellbeing.
             </p>
           </div>
         </div>
 
-        {/* Organizations */}
+        {/* Organisations */}
         <SectionHeader 
-          title="Organizations & Websites" 
-          subtitle="Expert resources from trusted organizations"
+          title="Organisations & Websites" 
+          subtitle="Expert resources from trusted child safety organisations"
           align="left"
         />
         
@@ -57,7 +57,7 @@ const Resources = () => {
           
           <ResourceCard
             title="Family Online Safety Institute"
-            description="International non-profit organization working to make the online world safer for children and families."
+            description="International non-profit organisation working to make the online world safer for children and families."
             url="https://www.fosi.org"
             organization="FOSI"
           />
@@ -84,7 +84,7 @@ const Resources = () => {
                 <HelpCircle className="text-kid-blue" size={24} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-1">Talking to Kids About Online Safety</h3>
+                <h3 className="text-lg font-semibold mb-1">Talking to Children About Online Safety</h3>
                 <p className="text-gray-600">Age-appropriate conversation starters and tips for discussing internet safety with children.</p>
               </div>
             </div>
@@ -105,7 +105,7 @@ const Resources = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-1">Digital Citizenship Guide</h3>
-                <p className="text-gray-600">Teaching children responsible online behavior, digital literacy, and critical thinking.</p>
+                <p className="text-gray-600">Teaching children responsible online behaviour, digital literacy, and critical thinking.</p>
               </div>
             </div>
             <a 
@@ -125,7 +125,7 @@ const Resources = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-1">Cyberbullying Prevention</h3>
-                <p className="text-gray-600">How to recognize signs of cyberbullying and steps to take if your child is affected.</p>
+                <p className="text-gray-600">How to recognise signs of cyberbullying and steps to take if your child is affected.</p>
               </div>
             </div>
             <a 

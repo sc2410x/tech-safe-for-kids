@@ -18,7 +18,7 @@ const AppSafety = () => {
             <div className="md:w-3/4">
               <h1 className="text-3xl md:text-4xl font-bold mb-4">Apps & Websites Safety</h1>
               <p className="text-xl text-gray-700 mb-4">
-                Children access countless apps and websites, each with their own risks and privacy concerns. Learn how to evaluate them and implement safety measures at the app level.
+                Children access countless apps and websites, each with their own risks and privacy concerns. Learn how to evaluate them and implement essential safety measures.
               </p>
             </div>
           </div>
@@ -121,8 +121,8 @@ const AppSafety = () => {
           />
           
           <SafetyTipCard
-            title="Check ESRB/PEGI Ratings"
-            description="Always check game age ratings and content descriptors to ensure games are appropriate for your child's age and maturity level."
+            title="Check PEGI Ratings"
+            description="Always check PEGI game age ratings and content descriptors to ensure games are appropriate for your child's age and maturity level."
             icon={<Eye />}
             level="beginner"
           />

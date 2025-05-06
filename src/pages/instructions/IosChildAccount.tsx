@@ -7,7 +7,7 @@ const IosChildAccount = () => {
   return (
     <InstructionLayout
       title="Setting Up a Child Account on iOS"
-      subtitle="Create and manage a dedicated Apple ID for your child with parental controls"
+      subtitle="Create and manage a dedicated Apple ID for your child with robust parental controls"
       icon={<Baby size={80} className="text-kid-blue" />}
       backLink="/devices"
       backText="Device Safety"
@@ -18,8 +18,8 @@ const IosChildAccount = () => {
           <h2 className="text-2xl font-bold">What is a Child Account?</h2>
           <p>
             Apple's Family Sharing allows you to create an Apple ID for your child under 13 (age varies by country).
-            With a child account, you have parental control over permissions and purchases while still giving
-            your child their own personalized device experience.
+            With a child account, you have parental control over permissions and purchases whilst still giving
+            your child their own personalised device experience.
           </p>
         </div>
 

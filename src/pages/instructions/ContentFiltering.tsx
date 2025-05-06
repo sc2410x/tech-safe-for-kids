@@ -48,7 +48,7 @@ const ContentFiltering = () => {
                 <span className="bg-kid-blue text-white text-lg font-bold rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1 flex-shrink-0">2</span>
                 <div>
                   <h3 className="text-xl font-medium mb-2">Locate the content filtering settings</h3>
-                  <p className="text-gray-700 mb-3">Look for options labeled "Parental Controls," "Access Restrictions," "Content Filtering," "Website Filtering," or similar. These options are often found under security settings.</p>
+                  <p className="text-gray-700 mb-3">Look for options labelled "Parental Controls," "Access Restrictions," "Content Filtering," "Website Filtering," or similar. These options are often found under security settings.</p>
                   <img 
                     src="https://images.unsplash.com/photo-1614064548237-096d7a417aca?q=80&w=2370&auto=format&fit=crop" 
                     alt="Router settings interface" 

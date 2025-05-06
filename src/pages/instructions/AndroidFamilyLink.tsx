@@ -45,7 +45,7 @@ const AndroidFamilyLink = () => {
   return (
     <InstructionLayout
       title="Setting Up Google Family Link"
-      description="Google Family Link helps parents monitor and manage their child's Android device usage. Here's how to set it up."
+      description="Google Family Link helps parents monitor and manage their child's Android device usage. Follow our step-by-step guide to set it up properly."
       steps={steps}
       relatedInstructions={[
         { title: "Set Up a Child Account", link: "/instructions/android-child-account" }

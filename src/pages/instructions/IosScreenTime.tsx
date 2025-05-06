@@ -40,7 +40,7 @@ const IosScreenTime = () => {
   return (
     <InstructionLayout
       title="Setting Up Screen Time on iOS"
-      description="Screen Time helps you monitor and manage your child's device usage. Here's how to set it up on an iPhone or iPad."
+      description="Screen Time helps you monitor and manage your child's device usage. Follow our comprehensive guide to set it up properly on an iPhone or iPad."
       steps={steps}
       relatedInstructions={[
         { title: "Content & Privacy Restrictions", link: "/instructions/ios-content-restrictions" },
