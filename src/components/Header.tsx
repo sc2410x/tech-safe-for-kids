@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Menu, X, Heart, UserCircle2, Search } from 'lucide-react';
+import { Shield, Menu, X, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -47,16 +47,6 @@ const Header = () => {
             Resources
           </Link>
         </nav>
-
-        {/* Search Icon (Desktop) */}
-        <div className="hidden md:flex items-center space-x-4">
-          <button className="text-gray-600 hover:text-kid-purple transition-colors">
-            <Search size={20} />
-          </button>
-          <button className="text-gray-600 hover:text-kid-purple transition-colors">
-            <UserCircle2 size={20} />
-          </button>
-        </div>
         
         {/* Mobile Menu Button */}
         <div className="md:hidden">
