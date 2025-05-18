@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Wifi, Smartphone, Link as LinkIcon, ArrowRight, Baby, Shield, Heart, LightbulbIcon, BookOpenIcon, AwardIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -74,7 +73,7 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-white to-kid-blue-light/30 border-2 border-kid-blue/20 shadow-xl transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-blob flex items-center justify-center bg-gradient-to-br from-kid-blue to-kid-blue-dark text-white group-hover:scale-110 transition-transform duration-300 shadow-md animate-pulse-slow">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-blob flex items-center justify-center bg-gradient-to-br from-kid-blue to-kid-blue-dark text-white group-hover:scale-110 transition-transform duration-300 shadow-md">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10"><path d="M2 12h10M9 8l4 4-4 4M22 18V6a2 2 0 0 0-2-2H9"></path></svg>
               </div>
               <h3 className="text-2xl font-semibold mb-3 text-kid-blue-dark font-display">Inappropriate Content</h3>
@@ -82,7 +81,7 @@ const Index = () => {
             </div>
             
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-white to-kid-purple-light/30 border-2 border-kid-purple/20 shadow-xl transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-blob flex items-center justify-center bg-gradient-to-br from-kid-purple to-kid-purple-dark text-white group-hover:scale-110 transition-transform duration-300 shadow-md animate-pulse-slow">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-blob flex items-center justify-center bg-gradient-to-br from-kid-purple to-kid-purple-dark text-white group-hover:scale-110 transition-transform duration-300 shadow-md">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
               </div>
               <h3 className="text-2xl font-semibold mb-3 text-kid-purple-dark font-display">Online Predators</h3>
@@ -90,7 +89,7 @@ const Index = () => {
             </div>
             
             <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-white to-kid-yellow-light/30 border-2 border-kid-yellow/20 shadow-xl transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-blob flex items-center justify-center bg-gradient-to-br from-kid-yellow to-kid-yellow-dark text-white group-hover:scale-110 transition-transform duration-300 shadow-md animate-pulse-slow">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-blob flex items-center justify-center bg-gradient-to-br from-kid-yellow to-kid-yellow-dark text-white group-hover:scale-110 transition-transform duration-300 shadow-md">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10"><path d="M21.7 16.4l-3 1.7v-3.4l3-1.7z"></path><path d="M21.7 11.4l-3 1.7v-3.4l3-1.7z"></path><path d="M21.7 6.4l-3 1.7v-3.4l3-1.7z"></path><path d="M11.8 18.1l-3-1.7v3.4l3 1.7z"></path><path d="M11.8 13.1l-3-1.7v3.4l3 1.7z"></path><path d="M11.8 8.1l-3-1.7v3.4l3 1.7z"></path><path d="M11.8 3.1l-3-1.7v3.4l3 1.7z"></path><path d="m16.8 5.7-3 1.7v3.4l3-1.7z"></path><path d="m6.8 12.4-3-1.7v3.4l3 1.7z"></path><path d="m6.8 17.4-3-1.7v3.4l3 1.7z"></path></svg>
               </div>
               <h3 className="text-2xl font-semibold mb-3 text-kid-yellow-dark font-display">Cyberbullying</h3>
@@ -194,7 +193,7 @@ const Index = () => {
             
             <div className="relative z-10">
               <div className="flex justify-center mb-8">
-                <Heart size={64} className="text-white opacity-90 animate-pulse" />
+                <Heart size={64} className="text-white opacity-90" />
               </div>
               <h2 className="text-4xl font-bold mb-6 drop-shadow-sm font-display">Ready to create a safer online environment?</h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">

@@ -17,10 +17,10 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="bg-gradient-to-br from-kid-purple via-kid-blue to-kid-yellow rounded-blob p-2 shadow-md transform transition-all duration-300 group-hover:scale-110 animate-pulse-slow">
+          <div className="bg-gradient-to-br from-kid-purple via-kid-blue to-kid-yellow rounded-blob p-2 shadow-md transform transition-all duration-300 group-hover:scale-110">
             <div className="flex items-center justify-center">
               <Shield size={24} className="text-white" />
-              <Heart size={16} className="text-white absolute ml-1 mt-1 animate-pulse" />
+              <Heart size={16} className="text-white absolute ml-1 mt-1" />
             </div>
           </div>
           <div className="flex flex-col items-start">
