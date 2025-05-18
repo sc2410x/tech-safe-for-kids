@@ -36,7 +36,7 @@ const CategoryCard = ({
           <img 
             src={imageSrc} 
             alt={title} 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
           />
         </div>
       )}

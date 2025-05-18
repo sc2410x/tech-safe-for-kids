@@ -12,7 +12,8 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 hero-gradient opacity-90"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1591017403286-fd8493524e1e')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
+        {/* Updated to use one of the provided children with devices images */}
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/8095043e-830f-419a-9d31-14b03f54443a.png')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
         
         {/* Decorative elements */}
         <div className="absolute top-20 left-10 w-24 h-24 rounded-blob bg-kid-yellow opacity-30 animate-bounce-slow"></div>
@@ -101,7 +102,7 @@ const Index = () => {
       
       {/* Get Started Section */}
       <section id="get-started" className="bg-gray-50 py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1472396961693-142e6e269027')] bg-cover bg-center opacity-5"></div>
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/d00299a9-802f-4f1d-92a3-ab508e93c8f6.png')] bg-cover bg-center opacity-5"></div>
         
         {/* Decorative blobs */}
         <div className="absolute top-10 left-10 w-40 h-40 rounded-blob bg-kid-green-light opacity-40"></div>
@@ -121,7 +122,7 @@ const Index = () => {
               icon={<Wifi className="text-white" />}
               to="/wifi"
               color="blue"
-              imageSrc="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&w=2360&auto=format&fit=crop"
+              imageSrc="/lovable-uploads/d00299a9-802f-4f1d-92a3-ab508e93c8f6.png"
             />
             
             <CategoryCard 
@@ -130,7 +131,7 @@ const Index = () => {
               icon={<Smartphone className="text-white" />}
               to="/devices"
               color="teal"
-              imageSrc="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2370&auto=format&fit=crop"
+              imageSrc="/lovable-uploads/14cc5096-4b81-46b7-8dbd-ffa4c3227411.png"
             />
             
             <CategoryCard 
@@ -139,7 +140,7 @@ const Index = () => {
               icon={<LinkIcon className="text-white" />}
               to="/apps"
               color="purple"
-              imageSrc="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2370&auto=format&fit=crop"
+              imageSrc="/lovable-uploads/8095043e-830f-419a-9d31-14b03f54443a.png"
             />
           </div>
         </div>
@@ -185,7 +186,7 @@ const Index = () => {
       <section className="bg-white py-10 pb-20">
         <div className="section-container">
           <div className="bg-gradient-to-r from-kid-purple via-kid-blue to-kid-yellow rounded-3xl p-10 md:p-16 text-white text-center shadow-2xl relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1591017403286-fd8493524e1e')] bg-cover bg-center mix-blend-overlay opacity-10"></div>
+            <div className="absolute inset-0 bg-[url('/lovable-uploads/14cc5096-4b81-46b7-8dbd-ffa4c3227411.png')] bg-cover bg-center mix-blend-overlay opacity-10"></div>
             
             {/* Abstract shapes */}
             <div className="absolute top-0 left-0 w-64 h-64 bg-white opacity-10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
