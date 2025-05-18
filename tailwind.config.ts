@@ -91,8 +91,28 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Nunito', 'system-ui', '-apple-system', 'sans-serif'],
-				display: ['Quicksand', 'system-ui', '-apple-system', 'sans-serif'],
+				sans: [
+					'-apple-system', 
+					'BlinkMacSystemFont', 
+					'"San Francisco"', 
+					'"SF Pro Text"', 
+					'system-ui', 
+					'Roboto', 
+					'Helvetica Neue', 
+					'Arial', 
+					'sans-serif'
+				],
+				display: [
+					'-apple-system', 
+					'BlinkMacSystemFont', 
+					'"San Francisco"', 
+					'"SF Pro Display"', 
+					'system-ui', 
+					'Roboto', 
+					'Helvetica Neue', 
+					'Arial', 
+					'sans-serif'
+				],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
