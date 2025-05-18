@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { ArrowRight, Baby, Shield, Heart, BookOpenIcon, AwardIcon } from 'lucide-react';
+import { ArrowRight, Baby, Shield, Heart, BookOpen, Award, Wifi, Smartphone, Link as LinkIcon, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Layout from '@/components/Layout';
 import SectionHeader from '@/components/SectionHeader';
@@ -215,7 +214,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <div className="bg-kid-purple-light/30 p-6 rounded-2xl flex flex-col items-center text-center group hover:bg-kid-purple-light transition-colors duration-300">
               <div className="w-16 h-16 bg-kid-purple rounded-full flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
-                <LightbulbIcon size={32} />
+                <Lightbulb size={32} />
               </div>
               <h3 className="text-xl font-semibold mb-2 font-display">Easy to Understand</h3>
               <p className="text-gray-700">Simple explanations without technical jargon, so you can implement protections quickly.</p>
@@ -223,7 +222,7 @@ const Index = () => {
             
             <div className="bg-kid-blue-light/30 p-6 rounded-2xl flex flex-col items-center text-center group hover:bg-kid-blue-light transition-colors duration-300">
               <div className="w-16 h-16 bg-kid-blue rounded-full flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
-                <BookOpenIcon size={32} />
+                <BookOpen size={32} />
               </div>
               <h3 className="text-xl font-semibold mb-2 font-display">Expert Guidance</h3>
               <p className="text-gray-700">Created by cybersecurity and child development specialists with families in mind.</p>
@@ -231,7 +230,7 @@ const Index = () => {
             
             <div className="bg-kid-yellow-light/30 p-6 rounded-2xl flex flex-col items-center text-center group hover:bg-kid-yellow-light transition-colors duration-300">
               <div className="w-16 h-16 bg-kid-yellow rounded-full flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
-                <AwardIcon size={32} />
+                <Award size={32} />
               </div>
               <h3 className="text-xl font-semibold mb-2 font-display">Free Resources</h3>
               <p className="text-gray-700">Access to all guides and tools at no cost, because online safety should be available to everyone.</p>
