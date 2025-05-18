@@ -15,8 +15,8 @@ const Header = () => {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group">
+        {/* Logo with semantic markup for accessibility */}
+        <Link to="/" className="flex items-center gap-2 group" aria-label="TechSafeForKids Home">
           <div className="bg-gradient-to-br from-kid-purple via-kid-blue to-kid-yellow rounded-blob p-2 shadow-md transform transition-all duration-300 group-hover:scale-110">
             <div className="flex items-center justify-center">
               <Shield size={24} className="text-white" />
@@ -29,8 +29,8 @@ const Header = () => {
           </div>
         </Link>
         
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-2">
+        {/* Desktop Navigation with semantic nav element and proper aria labels */}
+        <nav className="hidden md:flex items-center space-x-2" aria-label="Main Navigation">
           <Link to="/" className="text-gray-700 hover:text-kid-purple font-medium px-4 py-2 rounded-full hover:bg-kid-purple-light transition-colors">
             Home
           </Link>
@@ -48,43 +48,50 @@ const Header = () => {
           </Link>
         </nav>
         
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button with improved accessibility */}
         <div className="md:hidden">
-          <Button variant="ghost" size="icon" className="text-gray-700" onClick={toggleMobileMenu}>
-            <span className="sr-only">Open menu</span>
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="text-gray-700" 
+            onClick={toggleMobileMenu} 
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-6 w-6" aria-hidden="true" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6" aria-hidden="true" />
             )}
           </Button>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu with improved accessibility */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg border-t border-gray-100 animate-fade-in">
-          <div className="px-4 pt-2 pb-4 space-y-1">
-            <Link to="/" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-purple hover:bg-kid-purple-light rounded-full" onClick={() => setMobileMenuOpen(false)}>
+        <div id="mobile-menu" className="md:hidden bg-white shadow-lg border-t border-gray-100 animate-fade-in" role="menu">
+          <nav className="px-4 pt-2 pb-4 space-y-1" aria-label="Mobile Navigation">
+            <Link to="/" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-purple hover:bg-kid-purple-light rounded-full" onClick={() => setMobileMenuOpen(false)} role="menuitem">
               Home
             </Link>
             
-            <Link to="/wifi" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-blue hover:bg-kid-blue-light rounded-full" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/wifi" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-blue hover:bg-kid-blue-light rounded-full" onClick={() => setMobileMenuOpen(false)} role="menuitem">
               WiFi Safety
             </Link>
             
-            <Link to="/devices" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-green hover:bg-kid-green-light rounded-full" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/devices" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-green hover:bg-kid-green-light rounded-full" onClick={() => setMobileMenuOpen(false)} role="menuitem">
               Device Safety
             </Link>
             
-            <Link to="/apps" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-yellow hover:bg-kid-yellow-light rounded-full" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/apps" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-yellow hover:bg-kid-yellow-light rounded-full" onClick={() => setMobileMenuOpen(false)} role="menuitem">
               App Safety
             </Link>
             
-            <Link to="/resources" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-orange hover:bg-kid-orange-light rounded-full" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/resources" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-orange hover:bg-kid-orange-light rounded-full" onClick={() => setMobileMenuOpen(false)} role="menuitem">
               Resources
             </Link>
-          </div>
+          </nav>
         </div>
       )}
     </header>
