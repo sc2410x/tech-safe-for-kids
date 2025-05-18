@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +7,7 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
+    --background: 42 100% 98%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -15,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 196 94% 48%;
+    --primary: 264 75% 68%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 172 70% 40%;
+    --secondary: 42 100% 70%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 266 81% 74%;
+    --accent: 160 70% 75%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,9 +33,9 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 196 94% 48%;
+    --ring: 264 75% 68%;
 
-    --radius: 0.75rem;
+    --radius: 1.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -52,13 +53,14 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     -webkit-font-smoothing: antialiased;
   }
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold text-foreground;
+    font-family: 'Quicksand', sans-serif;
     letter-spacing: -0.02em;
   }
   
@@ -94,20 +96,33 @@
       transform: translateY(-10px);
     }
   }
+  
+  @keyframes wiggle {
+    0%, 100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
 
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
+  
+  .animate-wiggle {
+    animation: wiggle 2s ease-in-out infinite;
+  }
 
   .font-display {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     letter-spacing: -0.03em;
   }
 }
 
 .hero-gradient {
-  @apply bg-gradient-to-br from-kid-blue via-kid-teal to-kid-purple-light;
+  @apply bg-gradient-to-br from-purple-300 via-yellow-200 to-blue-300;
 }
 
 /* Enhanced hover effects */
@@ -126,4 +141,29 @@
 
 .card-hover:hover {
   @apply transform -translate-y-2;
+}
+
+/* Playful design elements */
+.blob-shape {
+  border-radius: 71% 29% 41% 59% / 59% 59% 41% 41%;
+}
+
+.wavy-border {
+  position: relative;
+}
+
+.wavy-border::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='10' viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 C 30 0, 70 0, 100 10 Z' fill='%23f0f0f0'/%3E%3C/svg%3E");
+  background-size: 100px 10px;
+}
+
+/* Fun bubble elements */
+.bubble {
+  @apply absolute rounded-full bg-opacity-30 animate-pulse;
 }
