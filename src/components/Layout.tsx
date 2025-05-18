@@ -16,7 +16,7 @@ const Layout = ({ children }: LayoutProps) => {
       <div className="fixed top-1/2 left-1/2 w-80 h-80 -translate-x-1/2 -translate-y-1/2 rounded-blob bg-kid-yellow-light opacity-10 blur-3xl"></div>
       
       <Header />
-      <main className="flex-grow relative z-10">
+      <main className="flex-grow relative z-10 -mt-2">
         {children}
       </main>
       <Footer />

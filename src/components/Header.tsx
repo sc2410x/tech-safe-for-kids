@@ -43,6 +43,9 @@ const Header = () => {
           <Link to="/apps" className="text-gray-700 hover:text-kid-yellow font-medium px-4 py-2 rounded-full hover:bg-kid-yellow-light transition-colors">
             App Safety
           </Link>
+          <Link to="/helper" className="text-white bg-gradient-to-r from-kid-purple to-kid-blue font-medium px-5 py-2 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+            Parent Helper
+          </Link>
           <Link to="/resources" className="text-gray-700 hover:text-kid-orange font-medium px-4 py-2 rounded-full hover:bg-kid-orange-light transition-colors">
             Resources
           </Link>
@@ -86,6 +89,10 @@ const Header = () => {
             
             <Link to="/apps" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-yellow hover:bg-kid-yellow-light rounded-full" onClick={() => setMobileMenuOpen(false)} role="menuitem">
               App Safety
+            </Link>
+            
+            <Link to="/helper" className="block px-4 py-2 text-base font-medium text-white bg-gradient-to-r from-kid-purple to-kid-blue rounded-full" onClick={() => setMobileMenuOpen(false)} role="menuitem">
+              Parent Helper
             </Link>
             
             <Link to="/resources" className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-kid-orange hover:bg-kid-orange-light rounded-full" onClick={() => setMobileMenuOpen(false)} role="menuitem">

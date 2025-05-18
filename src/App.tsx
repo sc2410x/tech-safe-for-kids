@@ -13,6 +13,7 @@ import AppSafety from "./pages/AppSafety";
 import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
 import AnalyticsDashboard from "./pages/AnalyticsDashboard";
+import ParentHelper from "./pages/ParentHelper";
 
 // Instruction Pages
 import ChangeRouterPassword from "./pages/instructions/ChangeRouterPassword";
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="/wifi" element={<WiFiSafety />} />
             <Route path="/devices" element={<DeviceSafety />} />
             <Route path="/apps" element={<AppSafety />} />
+            <Route path="/helper" element={<ParentHelper />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/admin/analytics" element={<AnalyticsDashboard />} />
             
