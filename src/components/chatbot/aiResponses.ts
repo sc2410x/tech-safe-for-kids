@@ -9,12 +9,57 @@ export const getAIResponse = (userMessage: string, conversationHistory: Array<{c
   // Check if this is a follow-up question by looking at conversation context
   const isFollowUp = recentMessages.length > 2; // More than just the initial greeting
   
-  // Gaming-specific responses with context awareness
-  if (lowercaseMessage.includes('fortnite') || conversationContext.includes('fortnite')) {
-    if (lowercaseMessage.includes('xbox') || lowercaseMessage.includes('playstation') || lowercaseMessage.includes('console')) {
-      return `Great! For Fortnite on gaming consoles, here's what I recommend:
+  // Intelligent platform detection with variations and misspellings
+  const detectPlatform = (message: string): string | null => {
+    const msg = message.toLowerCase().trim();
+    
+    // Xbox variations
+    if (msg.includes('xbox') || msg.includes('x box') || msg.includes('xb') || 
+        msg.match(/xbox\s*(one|series|360)/i) || msg.includes('microsoft console')) {
+      return 'xbox';
+    }
+    
+    // PlayStation variations
+    if (msg.includes('playstation') || msg.includes('play station') || msg.includes('ps5') || 
+        msg.includes('ps4') || msg.includes('ps3') || msg.includes('pstation') || 
+        msg.includes('sony') || msg.match(/play\s*station/i)) {
+      return 'playstation';
+    }
+    
+    // Nintendo Switch variations
+    if (msg.includes('nintendo') || msg.includes('switch') || msg.includes('nintedo') || 
+        msg.includes('nitendo') || msg.includes('nin switch') || msg.includes('n switch') ||
+        msg.includes('nintendo switch') || msg.match(/nin.*switch/i)) {
+      return 'nintendo_switch';
+    }
+    
+    // PC variations
+    if (msg.includes('pc') || msg.includes('computer') || msg.includes('desktop') || 
+        msg.includes('laptop') || msg.includes('windows') || msg.includes('mac') ||
+        msg.includes('steam') || msg.includes('epic games')) {
+      return 'pc';
+    }
+    
+    // Mobile variations
+    if (msg.includes('phone') || msg.includes('mobile') || msg.includes('tablet') || 
+        msg.includes('iphone') || msg.includes('ipad') || msg.includes('android') ||
+        msg.includes('ios') || msg.includes('samsung') || msg.includes('cell phone')) {
+      return 'mobile';
+    }
+    
+    return null;
+  };
 
-• **Enable Console Parental Controls**: Set up parental controls directly on the Xbox/PlayStation to restrict chat, limit spending, and control who can contact your son.
+  // Gaming-specific responses with context awareness and platform detection
+  if (lowercaseMessage.includes('fortnite') || conversationContext.includes('fortnite')) {
+    const detectedPlatform = detectPlatform(lowercaseMessage);
+    
+    // Handle platform-specific responses
+    if (detectedPlatform === 'xbox' || detectedPlatform === 'playstation') {
+      const consoleName = detectedPlatform === 'xbox' ? 'Xbox' : 'PlayStation';
+      return `Great! I can see you mentioned ${consoleName}. For Fortnite on ${consoleName}, here's what I recommend:
+
+• **Enable Console Parental Controls**: Set up parental controls directly on the ${consoleName} to restrict chat, limit spending, and control who can contact your son.
 
 • **Turn Off Voice Chat**: In Fortnite settings, disable voice chat to prevent your son from talking to strangers during matches.
 
@@ -22,11 +67,11 @@ export const getAIResponse = (userMessage: string, conversationHistory: Array<{c
 
 • **Monitor In-Game Purchases**: Fortnite has many cosmetic items for purchase - consider removing payment methods or setting spending limits.
 
-Would you like step-by-step instructions for setting up console parental controls, or do you have questions about any of these safety measures?`;
+Would you like step-by-step instructions for setting up ${consoleName} parental controls, or do you have questions about any of these safety measures?`;
     }
     
-    if (lowercaseMessage.includes('nintendo switch') || lowercaseMessage.includes('switch')) {
-      return `Perfect! For Fortnite on Nintendo Switch, here are the essential safety steps:
+    if (detectedPlatform === 'nintendo_switch') {
+      return `Perfect! I understand you're asking about Nintendo Switch. For Fortnite on Nintendo Switch, here are the essential safety steps:
 
 • **Nintendo Switch Parental Controls App**: Download the free Nintendo Switch Parental Controls app on your phone to monitor and control your son's gaming time and spending.
 
@@ -41,8 +86,8 @@ Would you like step-by-step instructions for setting up console parental control
 Would you like detailed steps for setting up the Nintendo Switch Parental Controls app, or do you need help with any specific safety setting?`;
     }
     
-    if (lowercaseMessage.includes('pc') || lowercaseMessage.includes('computer')) {
-      return `Perfect! For Fortnite on PC, here are the key safety steps:
+    if (detectedPlatform === 'pc') {
+      return `I see you're asking about PC gaming! For Fortnite on PC, here are the key safety steps:
 
 • **Epic Games Parental Controls**: Set up parental controls in your son's Epic Games account to restrict chat, purchases, and friend requests.
 
@@ -57,8 +102,8 @@ Would you like detailed steps for setting up the Nintendo Switch Parental Contro
 Would you like detailed instructions for Epic Games parental controls, or do you need help with any other aspect of PC gaming safety?`;
     }
     
-    if (lowercaseMessage.includes('mobile') || lowercaseMessage.includes('phone') || lowercaseMessage.includes('tablet')) {
-      return `Excellent! For Fortnite on mobile devices, here's your safety checklist:
+    if (detectedPlatform === 'mobile') {
+      return `Got it - you're asking about mobile gaming! For Fortnite on mobile devices, here's your safety checklist:
 
 • **Device Parental Controls**: Use iOS Screen Time or Android Family Link to limit gaming time and restrict in-app purchases.
 
@@ -73,15 +118,31 @@ Would you like detailed instructions for Epic Games parental controls, or do you
 Do you need help setting up Screen Time/Family Link, or would you like more details about Epic Games account safety settings?`;
     }
     
-    // If they mentioned Fortnite but no platform yet
-    return `Fortnite safety is definitely important! The specific safety steps depend on what platform your son is playing on. Could you tell me:
+    // If context suggests they answered a platform question but we didn't detect it clearly
+    if (isFollowUp && conversationContext.includes('what platform') && !detectedPlatform) {
+      return `I want to make sure I understand correctly - it sounds like you mentioned a gaming platform, but I want to give you the most accurate advice. 
 
-• Is he playing on Xbox, PlayStation, Nintendo Switch, PC, or mobile device?
+Could you clarify which device your son uses to play Fortnite? For example:
+• **Xbox** (Xbox One, Xbox Series X/S)
+• **PlayStation** (PS4, PS5) 
+• **Nintendo Switch**
+• **PC/Computer** (Windows, Mac)
+• **Mobile** (iPhone, iPad, Android phone/tablet)
+
+Once I know the exact platform, I can give you step-by-step safety instructions specifically for that device.`;
+    }
+    
+    // If they mentioned Fortnite but no platform detected yet
+    if (!detectedPlatform) {
+      return `Fortnite safety is definitely important! The specific safety steps depend on what platform your son is playing on. Could you tell me:
+
+• Is he playing on **Xbox, PlayStation, Nintendo Switch, PC, or mobile device**?
 
 This will help me give you the most relevant safety instructions for protecting him while gaming.`;
+    }
   }
   
-  // Device-specific follow-ups
+  // Device-specific follow-ups with better detection
   if (isFollowUp && (lowercaseMessage.includes('iphone') || lowercaseMessage.includes('ipad') || conversationContext.includes('ios'))) {
     if (lowercaseMessage.includes('screen time') || lowercaseMessage.includes('set up') || lowercaseMessage.includes('how')) {
       return `Here's how to set up Screen Time on your child's iOS device:
@@ -191,7 +252,7 @@ Which specific app or type of app are you most concerned about? I can give you d
     }
   }
 
-  // Default response that acknowledges their input
+  // Default response that acknowledges their input and asks for clarification
   return `I understand you're asking about "${userMessage}". I'm here to provide specific, actionable safety advice for your family.
 
 To give you the most helpful guidance, could you share a bit more detail? For example:
