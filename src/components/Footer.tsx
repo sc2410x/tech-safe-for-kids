@@ -1,8 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Heart, ExternalLink, Star, Mail, Send } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Shield, Heart, ExternalLink, Star } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,22 +14,6 @@ const Footer = () => {
       <div className="absolute left-1/2 bottom-10 w-16 h-16 rounded-blob bg-kid-blue-light opacity-20"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        {/* Newsletter signup */}
-        <div className="bg-white rounded-2xl p-8 mb-12 shadow-xl max-w-3xl mx-auto -mt-24 border border-kid-purple/10">
-          <h3 className="text-2xl font-bold mb-4 text-gray-800 font-display text-center">Get Monthly Safety Tips</h3>
-          <p className="text-gray-600 mb-6 text-center">Join our newsletter to receive the latest online safety updates for parents.</p>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <input 
-              type="email" 
-              placeholder="Your email address" 
-              className="flex-grow px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:border-kid-purple focus:ring-1 focus:ring-kid-purple"
-            />
-            <Button className="bg-kid-purple hover:bg-kid-purple-dark text-white px-6 rounded-full">
-              <Send size={16} className="mr-2" /> Subscribe
-            </Button>
-          </div>
-        </div>
-      
         <div className="flex flex-col md:flex-row justify-between gap-12">
           <div className="md:w-1/3">
             <Link to="/" className="inline-flex items-center gap-2 group mb-4">
@@ -79,18 +62,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-gray-800 font-display">Contact Us</h3>
-            <p className="text-gray-600 text-sm max-w-xs mb-3">
-              Have questions or suggestions? We'd love to hear from you!
-            </p>
-            <Link to="/contact">
-              <Button variant="outline" className="border-kid-purple text-kid-purple hover:bg-kid-purple-light rounded-full">
-                <Mail size={16} className="mr-2" /> Contact Us
-              </Button>
-            </Link>
-          </div>
         </div>
         
         <div className="mt-12 pt-6 border-t border-dashed border-gray-300">
@@ -101,7 +72,6 @@ const Footer = () => {
             <div className="flex gap-4">
               <Link to="/privacy" className="text-sm text-gray-500 hover:text-kid-purple">Privacy Policy</Link>
               <Link to="/terms" className="text-sm text-gray-500 hover:text-kid-purple">Terms of Use</Link>
-              <Link to="/contact" className="text-sm text-gray-500 hover:text-kid-purple">Contact Us</Link>
             </div>
           </div>
         </div>
