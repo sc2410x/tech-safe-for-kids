@@ -25,6 +25,22 @@ export const getAIResponse = (userMessage: string, conversationHistory: Array<{c
 Would you like step-by-step instructions for setting up console parental controls, or do you have questions about any of these safety measures?`;
     }
     
+    if (lowercaseMessage.includes('nintendo switch') || lowercaseMessage.includes('switch')) {
+      return `Perfect! For Fortnite on Nintendo Switch, here are the essential safety steps:
+
+• **Nintendo Switch Parental Controls App**: Download the free Nintendo Switch Parental Controls app on your phone to monitor and control your son's gaming time and spending.
+
+• **Disable Voice Chat**: In Fortnite settings, turn off voice chat to prevent communication with strangers during matches.
+
+• **Nintendo Account Settings**: Set up a child account linked to your family group, which gives you control over friend requests and communication.
+
+• **eShop Purchase Restrictions**: Remove saved payment methods or set up purchase approval requirements to prevent unauthorized V-Bucks purchases.
+
+• **Friend Code Privacy**: Teach your son never to share his Nintendo Switch friend code with strangers online.
+
+Would you like detailed steps for setting up the Nintendo Switch Parental Controls app, or do you need help with any specific safety setting?`;
+    }
+    
     if (lowercaseMessage.includes('pc') || lowercaseMessage.includes('computer')) {
       return `Perfect! For Fortnite on PC, here are the key safety steps:
 
@@ -93,6 +109,23 @@ For detailed step-by-step instructions with screenshots, check our iOS Screen Ti
 6. **Enable location tracking** to see where your child's device is
 
 Our Android Family Link guide has detailed instructions with screenshots. Do you need help with any specific step, or have questions about the features?`;
+    }
+  }
+  
+  // Nintendo Switch follow-ups
+  if (isFollowUp && (conversationContext.includes('nintendo') || conversationContext.includes('switch'))) {
+    if (lowercaseMessage.includes('how') || lowercaseMessage.includes('set up') || lowercaseMessage.includes('app') || lowercaseMessage.includes('parental controls')) {
+      return `Here's how to set up Nintendo Switch Parental Controls:
+
+1. **Download the Nintendo Switch Parental Controls app** on your smartphone
+2. **Create or sign in** to your Nintendo Account
+3. **Link your Switch console** by scanning the QR code or entering the registration code
+4. **Set time limits** for daily play time
+5. **Restrict games by age rating** (ESRB ratings)
+6. **Control communication features** and social media posting
+7. **Set bedtime alarms** to remind when it's time to stop playing
+
+The app also sends you monthly reports about your child's gaming habits. Would you like help with any specific setting or have questions about monitoring features?`;
     }
   }
   
