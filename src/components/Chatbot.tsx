@@ -14,7 +14,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      content: "Hi! I'm your TechSafe assistant. I can help you with online safety questions or direct you to the right resources. What would you like to know?",
+      content: "Hi! I'm your TechSafe assistant. I can help you with online safety questions and provide specific guidance for your family's digital protection. What would you like to know about?",
       isUser: false,
       timestamp: new Date()
     }
@@ -32,7 +32,8 @@ const Chatbot = () => {
       timestamp: new Date()
     };
 
-    setMessages(prev => [...prev, userMessage]);
+    const updatedMessages = [...messages, userMessage];
+    setMessages(updatedMessages);
     const currentInput = inputValue;
     setInputValue('');
     setIsTyping(true);
@@ -41,7 +42,7 @@ const Chatbot = () => {
     setTimeout(() => {
       const aiResponse: Message = {
         id: (Date.now() + 1).toString(),
-        content: getAIResponse(currentInput),
+        content: getAIResponse(currentInput, updatedMessages),
         isUser: false,
         timestamp: new Date()
       };
